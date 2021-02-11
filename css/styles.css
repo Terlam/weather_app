@@ -10,7 +10,7 @@
     {
         display: flex;
         flex-flow: row wrap;
-        background-image: url("images/sunrisemd.jpg");
+        background-image: url("../images/sunrisemd.jpg");
         background-repeat: repeat-x;
         color: white;
         padding: 20px;
