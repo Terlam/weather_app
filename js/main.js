@@ -1,3 +1,9 @@
+$("#getWeather").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#getWeather").click();
+    }
+});
+
 function weatherGetter() {
     let cityWeather = document.querySelector('#city').value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityWeather}&appid=2e3c135388fe301b2cff9c0698128f51&units=imperial`)
@@ -38,3 +44,30 @@ function weatherGetter() {
         
     });
 }
+
+function cityGetter() {
+    console.log(description.innerText)
+    let clientId = "8Zw4_e1xJ4TnnIUvbzhQJORwbg9su8ACGeepK6DR3Iw"
+    let cityPhoto = document.querySelector('#city').value;
+    fetch(`https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=squarish&query=${cityPhoto}&city`)
+    .then(response => response.json())
+    
+    .then(data2 => {
+        let city_photo = data2.urls.regular
+        console.log(data2)
+        let city_img_url = document.querySelector('#city_img_url')
+        city_img_url = city_photo
+        $('#city_img_url').css("background-image", `url(${city_photo})`)
+
+            let photoText = data2.user.name
+            let photo_link_text = document.querySelector('#photoText')
+            photo_link_text.innerHTML = 
+            `Photo by <a href="${data2.user.portfolio_url}" target="_blank">${photoText}</a>
+            on <a href="https://unsplash.com/" target="_blank">Unsplash</a>`
+            
+
+
+    });
+}
+
+
