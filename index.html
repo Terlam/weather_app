@@ -12,17 +12,22 @@
 </head>
 <body>
 
+
     <!-- Form to Retrieve Weather -->
     <div class="container justify-content-center">
-        <h2>Weather</h2>
-        <form class="form-inline" name="getWeather" id="getWeather">
-            <div class="form-group mb-2">
-                <label for="location"></label>
-                <input type="text" name="Location" class="form-control" placeholder="location" id="city">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Terrell's Weather App</h2>
             </div>
-            <button type="button" class="btn btn-danger mb-2" onclick="weatherGetter()">Get Weather</button>
-        </form>
-
+            <div class="col-md-6 col-md-offset-3">
+                <form class="form-inline" name="getWeather" id="getWeather">
+                    <div class="form-group mb-2">
+                        <label for="location" ></label>
+                        <input type="text" name="Location" class="form-control" placeholder="location" id="city">
+                    </div>
+                    <button type="button" class="btn btn-danger mb-2" onclick="weatherGetter();cityGetter()">Get Weather</button>
+                </form>
+            </div>
     </div>
 
 
@@ -36,9 +41,9 @@
     <!-- Display weather Clean -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-12 col-md-offset-3">
                 <div class="weather border-right rounded">
-                    <div class="current">
+                    <div class="current" id="city_img_url">
                         <div class="info container">
                             <div>&nbsp;</div>
                             <div class="city"><small><small>CITY:</small></small><div id="location">Cartagena</div></div>
@@ -65,6 +70,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        
+        <p class="container" id="photoText">Photo by <a href="#" target="_blank">Annie Sprat</a>
+         on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

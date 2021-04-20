@@ -1,3 +1,40 @@
+body{
+    background-color: #121212;
+}
+h2{
+    color: white;
+    opacity: 87%;
+}
+p {
+    color:white;
+    opacity: 60%;
+}
+a {
+    color: white;
+    opacity: 100%;
+
+}
+a:hover {
+    color: tomato;
+    text-decoration-line: underline;
+}
+.form-control
+{
+    background-color: white;
+    opacity: 60%;
+}
+label {
+    color: white;
+    
+}
+
+.container {
+    margin-top: 20px;
+}
+.city_image_url{
+    background-size: fill;
+}
+
 .weather
 {
     display: flex;
@@ -11,10 +48,11 @@
         display: flex;
         flex-flow: row wrap;
         background-image: url("../images/sunrisemd.jpg");
-        background-repeat: repeat-x;
+        background-size: cover;
+        
         color: white;
         padding: 20px;
-        text-shadow: 1px 1px #F68D2E;
+        text-shadow: 2px 2px #121212;
     }
 
         .weather .current .info
