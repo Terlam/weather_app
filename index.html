@@ -4,11 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
+<meta name="Description" content="A simple weather app"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
 <link rel="stylesheet" href="css/styles.css">
-<title>The Weather</title>
+
+<title>Terrell's Weather</title>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+
 </head>
 <body>
 
@@ -17,7 +23,7 @@
     <div class="container justify-content-center">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h2>Terrell's Weather App</h2>
+                <h2>Terrell's Weather</h2>
             </div>
             <div class="col-md-6 col-md-offset-3">
                 <form class="form-inline" name="getWeather" id="getWeather">
@@ -26,6 +32,7 @@
                         <input type="text" name="Location" class="form-control" placeholder="location" id="city">
                     </div>
                     <button type="button" class="btn btn-danger mb-2" onclick="weatherGetter();cityGetter()">Get Weather</button>
+                    <button type="button" class="btn btn-danger mb-2" onclick="weatherGetter();cityGetter()">Use Location</button>
                 </form>
             </div>
     </div>
@@ -72,8 +79,8 @@
         </div>
     </div>
 
+    <!-- Image Source Text -->
     <div class="container">
-        
         <p class="container" id="photoText">Photo by <a href="#" target="_blank">Annie Sprat</a>
          on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
     </div>
